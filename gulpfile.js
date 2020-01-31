@@ -9,7 +9,15 @@ const pug          = require('gulp-pug');
 const cleanCSS     = require('gulp-clean-css');
 const rename       = require("gulp-rename");
 const sourcemaps   = require('gulp-sourcemaps');
+const imagemin     = require('gulp-imagemin');
 
+
+gulp.task('img', function () {
+    return gulp.src('assets/img/**/*.*')
+        .pipe(gulp.dest('build/img'))
+        .pipe(imagemin())
+        .pipe(browserSync.reload({stream: true}))
+});
 
 gulp.task('deploy', function () {
     return gulp.src("./build/**/*")
@@ -44,11 +52,7 @@ gulp.task('fonts', function () {
         .pipe(browserSync.reload({stream: true}))
 });
 
-gulp.task('img', function () {
-    return gulp.src('assets/img/**/*.*')
-        .pipe(gulp.dest('build/img'))
-        .pipe(browserSync.reload({stream: true}))
-});
+
 
 
 gulp.task('js', function () {

@@ -47,5 +47,8 @@ window.onload = function(e){
         itemOff2[i].classList.add('itemOff2')
     }
 
+    hs.graphicsDir = '/highslide/graphics/';
+    hs.wrapperClassName = 'your-own-style';
+
 };
 
