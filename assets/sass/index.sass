@@ -42,27 +42,22 @@ body
     --justify-content-personal: 0
     --width-personaliti-item: 33.33%
     --flex-direction-personaliti: row
-    //--flex-direction-personal: row
     --justify-content-education: center
-    //--justify-content-personal: 0
+
 
 
 .avatar
   width: var(--icon-size-avatar-bg)
-  //height: var(--icon-size-avatar-bg)
   background-color: var(--background-color-avatar)
   border-radius: 50%
-  //margin: 0 auto
-  //display: flex
-  //justify-content: center
-  //align-items: center
+
 
 .section
   &:nth-child(2n-1)
     background-color: var(--color-second)
     width: 100%
     padding-top: var(--padding-block-top)
-    padding-bottom: var(--padding-block-bottom)
+    //padding-bottom: var(--padding-block-bottom)
     color: var(--color-third)
     a:link,
     a:visited,
@@ -89,6 +84,14 @@ body
   padding-top: 10px
   display: flex
   flex-direction: column
+  &__copyright
+    display: flex
+    justify-content: center
+    background-color: var(--color-third)
+    color: var(--color-first)
+    text-align: center
+    font-size: calc(var(--font-size-content-text)*1)
+
   &__item
     display: flex
     justify-content: center
